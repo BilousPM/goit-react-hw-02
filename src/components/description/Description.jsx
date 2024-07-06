@@ -1,6 +1,6 @@
 import s from './Description.module.css';
 
-function Description() {
+function Description({}) {
   return (
     <section>
       <h1>Sip Happens Café</h1>

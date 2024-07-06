@@ -1,20 +1,46 @@
+import { useState } from 'react';
+
 import s from './Options.module.css';
 
-function Options() {
+function Options({ onClick, value }) {
   return (
     <section>
       <ul>
         <li>
-          <button>Good</button>
+          <button
+            onClick={() => {
+              onClick('good');
+            }}
+          >
+            Good
+          </button>
         </li>
         <li>
-          <button>Neutral</button>
+          <button
+            onClick={() => {
+              onClick('neutral');
+            }}
+          >
+            Neutral
+          </button>
         </li>
         <li>
-          <button>Bad</button>
+          <button
+            onClick={() => {
+              onClick('bad');
+            }}
+          >
+            Bad
+          </button>
         </li>
         <li>
-          <button>Reset</button>
+          <button
+            onClick={() => {
+              onClick(777);
+            }}
+          >
+            Reset
+          </button>
         </li>
       </ul>
     </section>
