@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import s from './Options.module.css';
 
-function Options({ onClick, value }) {
+function Options({ onClick, reset, total }) {
   return (
     <section>
       <ul>
@@ -33,15 +33,11 @@ function Options({ onClick, value }) {
             Bad
           </button>
         </li>
-        <li>
-          <button
-            onClick={() => {
-              onClick(777);
-            }}
-          >
-            Reset
-          </button>
-        </li>
+        {total > 0 && (
+          <li>
+            <button onClick={reset}>Reset</button>
+          </li>
+        )}
       </ul>
     </section>
   );
